@@ -1,3 +1,5 @@
+package lesson_3;
+
 public class Main {
     public void sum(int a, int b) {
         int sum = a + b;

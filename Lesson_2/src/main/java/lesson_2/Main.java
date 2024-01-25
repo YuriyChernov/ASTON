@@ -1,4 +1,4 @@
-package aston;
+package lesson_2;
 
 public class Main {
     public void printThreeWords() {
