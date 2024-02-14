@@ -3,20 +3,21 @@ package lesson_9;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Main {
 
-    private static Set<Integer> getRandomSet() {
-        return new Random()
-                .ints(0, 20)
+    public static void main(String[] args) {
+        Random random = new Random();
+        Set<Integer> numbers = IntStream.generate(() -> random.nextInt(20) + 1)
                 .limit(5)
                 .boxed()
                 .collect(Collectors.toSet());
-    }
+        System.out.println("Рандомные числа: " + numbers);
 
-    public static void main(String[] args) {
-
-        System.out.println(getRandomSet());
+        long evenCount = numbers.stream()
+                .filter(number -> number % 2 == 0).count();
+        System.out.println("Кол-во чётных чисел: " + evenCount);
         System.out.println();
 
         List<String> list = Arrays.asList("Highload", "High", "Load", "Highload");
@@ -37,7 +38,6 @@ public class Main {
         System.out.println("Последний элемент: " + lastElement);
 
         List<String> collection = Arrays.asList("f10", "f15", "f2", "f4", "f4");
-
         collection.sort((s1, s2) -> {
             int num1 = Integer.parseInt(s1.substring(1));
             int num2 = Integer.parseInt(s2.substring(1));
@@ -48,16 +48,6 @@ public class Main {
         for (String s : sortedArray) {
             System.out.println(s);
         }
-
-        Task4 task4 = new Task4();
-        System.out.println("Средний возраст студентов мужского пола: " + task4.getAverageAgeOfMaleStudents());
-
-        List<Task4.Student> conscription = task4.getConscription();
-        System.out.println("Студенты, которым грозит призыв: ");
-        for (Task4.Student student : conscription) {
-            System.out.println(student.getName());
-        }
-        System.out.println();
 
         List<String> logins = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
