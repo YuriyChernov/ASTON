@@ -1,4 +1,4 @@
-package lesson_3;
+package lesson_2;
 
 public class Main {
     public void sum(int a, int b) {
