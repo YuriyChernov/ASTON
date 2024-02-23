@@ -1,31 +1,27 @@
 import Lesson_12.Factorial;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 
 public class FactorialTest {
     Factorial factorial = new Factorial();
 
-    @Test
-    @DisplayName("Проверка метода валидным значением")
-    public void checkValidNumber(){
+    @Test(description = "Тест на проверку валидного значения")
+    public void checkValidNumber() {
         int actual = factorial.factorialNumber(5);
-        Assertions.assertEquals(120, actual);
+        Assert.assertEquals(actual, 120);
     }
 
-    @Test
-    @DisplayName("Проверка метода отрицательным значением")
+    @Test(description = "Тест на проверку отрицательного значения",
+            expectedExceptions = IllegalArgumentException.class,
+            expectedExceptionsMessageRegExp = "IllegalArgumentException")
     void testExpectedException() {
-        IllegalArgumentException thrown = Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            factorial.factorialNumber(-1);
-        }, "IllegalArgumentException");
-        Assertions.assertEquals("IllegalArgumentException", thrown.getMessage());
+        factorial.factorialNumber(-1);
     }
 
-    @Test
-    @DisplayName("Проверка метода значением ноль")
-    public void checkZeroNumber(){
+    @Test(description = "Тест на проверку нуля")
+    public void checkZeroNumber() {
         int actual = factorial.factorialNumber(0);
-        Assertions.assertEquals(1, actual);
+        Assert.assertEquals(actual, 1);
     }
 }

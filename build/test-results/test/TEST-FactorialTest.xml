@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FactorialTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-02-23T13:38:03" hostname="L5CG1233NLB" time="0.017">
+<testsuite name="FactorialTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-02-23T14:01:18" hostname="L5CG1233NLB" time="0.007">
   <properties/>
-  <testcase name="ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð¼ÐµÑ‚Ð¾Ð´Ð° Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸ÐµÐ¼ Ð½Ð¾Ð»ÑŒ" classname="FactorialTest" time="0.012"/>
-  <testcase name="ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð¼ÐµÑ‚Ð¾Ð´Ð° Ð¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¼ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸ÐµÐ¼" classname="FactorialTest" time="0.002"/>
-  <testcase name="ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð¼ÐµÑ‚Ð¾Ð´Ð° Ð²Ð°Ð»Ð¸Ð´Ð½Ñ‹Ð¼ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸ÐµÐ¼" classname="FactorialTest" time="0.001"/>
+  <testcase name="checkValidNumber" classname="FactorialTest" time="0.003"/>
+  <testcase name="checkZeroNumber" classname="FactorialTest" time="0.0"/>
+  <testcase name="testExpectedException" classname="FactorialTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
